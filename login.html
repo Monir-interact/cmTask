@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1b1d20">
+  <title>Sign in — Creative Matter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+  <main class="auth" id="auth">
+
+    <section class="auth__brand" aria-hidden="true">
+      <div class="brand">
+        <span class="brand__mark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><line x1="12" y1="6" x2="12" y2="18"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+        </span>
+        <span class="brand__name">Creative Matter</span>
+      </div>
+
+      <div class="auth__pitch">
+        <h1>Every shot, from brief to hand-off.</h1>
+        <p>Plan renders, collect client feedback and deliver on time — one board for the whole studio.</p>
+      </div>
+
+      <div class="auth__preview">
+        <div class="mini-list"><span class="mini-list__title">To-Do</span><span class="mini-card"><i style="background:#1849d6"></i></span><span class="mini-card mini-card--short"><i style="background:#27ae60"></i></span></div>
+        <div class="mini-list"><span class="mini-list__title">Progress</span><span class="mini-card mini-card--cover"><i style="background:#5c59e8"></i></span><span class="mini-card"><i style="background:#c4161c"></i></span></div>
+        <div class="mini-list"><span class="mini-list__title">QA</span><span class="mini-card mini-card--short"><i style="background:#d69e3d"></i></span></div>
+      </div>
+
+      <p class="auth__foot">© 2026 Creative Matter Studio</p>
+    </section>
+
+    <section class="auth__panel">
+      <div class="auth-card">
+        <div class="brand auth-card__logo">
+          <span class="brand__mark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><line x1="12" y1="6" x2="12" y2="18"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+          </span>
+          <span class="brand__name">Creative Matter</span>
+        </div>
+
+        <h2 class="auth-card__title" id="auth-title">Welcome back</h2>
+        <p class="auth-card__sub" id="auth-sub">Sign in to your studio workspace</p>
+
+        <div id="google-slot" class="google-slot">
+          <button class="btn-google" id="google-btn" type="button">
+            <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+            <span>Continue with Google</span>
+          </button>
+        </div>
+
+        <div class="auth-or"><span>or use your email</span></div>
+
+        <form class="auth-form" id="auth-form" novalidate>
+          <div class="field" id="name-field" hidden>
+            <label class="field__label" for="auth-name">Full name</label>
+            <input class="input" id="auth-name" type="text" autocomplete="name" placeholder="Jordan Mire">
+          </div>
+          <div class="field">
+            <label class="field__label" for="auth-email">Email</label>
+            <input class="input" id="auth-email" type="email" autocomplete="email" placeholder="you@gmail.com" required>
+          </div>
+          <div class="field">
+            <label class="field__label" for="auth-pass">Password</label>
+            <div class="pass-wrap">
+              <input class="input" id="auth-pass" type="password" autocomplete="current-password" placeholder="At least 6 characters" required minlength="6">
+              <button class="pass-toggle" id="pass-toggle" type="button" aria-label="Show password">Show</button>
+            </div>
+          </div>
+          <div class="auth-row" id="signin-row">
+            <label class="check"><input type="checkbox" id="auth-remember" checked><span>Keep me signed in</span></label>
+            <a href="#" id="forgot">Forgot password?</a>
+          </div>
+          <p class="auth-msg" id="auth-msg" role="alert"></p>
+          <button class="btn btn--primary btn--lg btn--block" type="submit" id="auth-submit">Sign in</button>
+        </form>
+
+        <p class="auth-switch"><span id="switch-text">New to Creative Matter?</span> <a href="#" id="switch-mode">Create an account</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shown only when no Google Client ID is configured in script.js -->
+  <div class="overlay" id="gdemo" hidden>
+    <div class="modal modal--sm" role="dialog" aria-modal="true" aria-labelledby="gdemo-title">
+      <div class="modal__head">
+        <svg width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>
+        <h2 class="modal__title" id="gdemo-title">Sign in with Google</h2>
+        <button class="icon-btn icon-btn--filled" type="button" data-gdemo-close aria-label="Close">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <p class="gdemo__note">Demo mode — add your Google OAuth Client ID to <code>CM_CONFIG.googleClientId</code> at the top of <code>script.js</code> to use real Google sign-in.</p>
+        <div class="field">
+          <label class="field__label" for="gdemo-email">Gmail address</label>
+          <input class="input" id="gdemo-email" type="email" placeholder="you@gmail.com" autocomplete="email">
+        </div>
+        <div class="field">
+          <label class="field__label" for="gdemo-name">Name</label>
+          <input class="input" id="gdemo-name" type="text" placeholder="Optional" autocomplete="name">
+        </div>
+        <p class="auth-msg" id="gdemo-msg" role="alert"></p>
+      </div>
+      <div class="modal__foot">
+        <span class="modal__hint"></span>
+        <button class="btn btn--ghost btn--lg" type="button" data-gdemo-close>Cancel</button>
+        <button class="btn btn--primary btn--lg" type="button" id="gdemo-continue">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
